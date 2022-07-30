@@ -1,0 +1,26 @@
+<div class="list">
+  <h3>{{ title }}</h3>
+  <!-- form add todolist -->
+  <div class="form">
+    <input type="text" name="list" [(ngModel)]="addListValue" />
+    <button type="button" (click)="addList()">Добавить</button>
+  </div>
+  <!-- todo list -->
+  <div class="list-items">
+    <div class="item" *ngFor="let item of listArr;  let i = index;">
+      <div class="item-name">{{item.name}}</div>
+      <button type="button" (click)="call(item)">редактировать</button>
+      <button type="button" (click)="deleteList(item,i)">удалить</button>
+    </div>
+  </div>
+  <!-- form edit item -->
+  <div class="modal">
+    <div class="modal-content">
+        <h3>редактировать</h3>
+        <div class="form-input">
+            <input type="text" name="list" [(ngModel)]="editListValue">
+            <button type="button" (click)="editList()">Обновить</button>
+        </div>
+    </div>
+  </div>
+</div>

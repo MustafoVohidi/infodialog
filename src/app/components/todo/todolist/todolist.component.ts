@@ -48,7 +48,6 @@ export class TodolistComponent implements OnInit {
       this.ngOnInit();
   }
   deleteList(elist:List, index:number){
-    // console.log(elist, index, this.listArr.indexOf(elist))
     this.listArr.splice(index, 1)
     this.ngOnInit()
   }
@@ -56,35 +55,4 @@ export class TodolistComponent implements OnInit {
     this.listObj=eitem;
     this.editListValue=eitem.name
   }
-  
-  // getAllList(){
-  //   this.crudService.getAllList().subscribe(res=>{
-  //     this.listArr=res;
-  //   }, err=>{
-  //     console.log(err)
-  //   })
-  // }
-  // addList(){
-  //   this.listObj.name=this.addListValue
-  //   this.crudService.addList(this.listObj).subscribe(res=>{
-  //     this.ngOnInit();
-  //     this.addListValue=''
-  //   }, err=>{
-  //     console.log(err)
-  //   })
-  // }
-  // editList(){
-  //   this.crudService.editList(this.listObj).subscribe(res=>{
-  //     this.ngOnInit();
-  //   }, err=>{
-  //     console.log(err)
-  //   })
-  // }
-  // deleteList(elist:List){
-  //   this.crudService.deleteList(elist).subscribe(res=>{
-  //     this.ngOnInit()
-  //   }, err=>{
-  //     console.log(err)
-  //   })
-  // }
 }

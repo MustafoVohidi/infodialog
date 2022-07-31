@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TodolistComponent } from './components/todo/todolist/todolist.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http'
+import { dataServices } from './service/data.service';
 // Декораторы
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import {HttpClientModule} from '@angular/common/http'
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [dataServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

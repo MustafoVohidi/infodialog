@@ -37,6 +37,7 @@ export class TodolistComponent implements OnInit {
   }
   addList() {
     this.listObj.name = this.addListValue;
+    this.listObj.toCompleteTask = false;
     this.listArr.push(this.listObj);
     this.ngOnInit();
     this.addListValue = '';
@@ -59,5 +60,8 @@ export class TodolistComponent implements OnInit {
   closeModal(event: any) {
     event.stopPropagation();
     this.isOpenModal = false;
+  }
+  doneTask(index:number){
+    this.listArr[index].toCompleteTask=!this.listArr[index].toCompleteTask
   }
 }

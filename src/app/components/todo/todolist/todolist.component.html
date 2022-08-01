@@ -8,7 +8,13 @@
   <!-- todo list -->
   <div class="list-items">
     <div class="item" *ngFor="let item of listArr; let i = index">
-      <div class="item-name">{{ item.name }}</div>
+      <div class="item-name">
+        <input type="checkbox" [(ngModel)]="item.toCompleteTask" (click)="doneTask(i)">
+        <span class="{{item.toCompleteTask? 'done' : ''}}">
+            {{ item.name }}
+        </span>
+        
+    </div>
       <button type="button" (click)="call(item)"  mat-button color="warn">редактировать</button>
       <button type="button" (click)="deleteList(item, i)"  mat-button class="button-warn">удалить</button>
     </div>

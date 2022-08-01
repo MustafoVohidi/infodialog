@@ -77,7 +77,7 @@ export class NumbersapiComponent implements OnInit {
       }
       let dateRand = Math.floor(Math.random() * 31);
       this.getNumberShip(monthRand + dateRand + '/date');
-    }, 10000);
+    }, 60000);
   }
   getDate(date: string) {
     this.getNumberShip(date + '/date');

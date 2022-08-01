@@ -1,0 +1,205 @@
+<div class="numbersapi">
+  <div class="modal" *ngIf="isOpenModal">
+    <div class="modal-content">
+      <button (click)="closeModal($event)" class="close-button">закрыть</button>
+      <div class="fact-text">
+        {{ triviaFact }}
+      </div>
+    </div>
+  </div>
+  <div class="group-buttons">
+    <div class="date">
+      <h4 class="title-block">Date</h4>
+      <div class="form">
+        <label>Введите (месяц/дата "5/25")</label>
+        <input type="text" matInput name="list" [(ngModel)]="addDateValue" />
+        <button type="button" (click)="addDate()" mat-button color="warn">
+          Добавить
+        </button>
+      </div>
+      <button
+        type="button"
+        mat-stroked-button
+        color="primary"
+        (click)="getDate('01/20')"
+      >
+        20 января
+      </button>
+      <button
+        type="button"
+        mat-stroked-button
+        color="primary"
+        (click)="getDate('08/10')"
+      >
+        10 августа
+      </button>
+      <button
+        type="button"
+        mat-stroked-button
+        color="primary"
+        (click)="getDate('09/13')"
+      >
+        13 сенября
+      </button>
+      <button
+        type="button"
+        mat-stroked-button
+        color="primary"
+        (click)="getDate('03/05')"
+      >
+        5 марта
+      </button>
+      <button
+        type="button"
+        mat-stroked-button
+        color="primary"
+        (click)="getDate('12/31')"
+      >
+        31 декабря
+      </button>
+    </div>
+    <div class="math">
+      <h4 class="title-block">Math</h4>
+      <div class="form">
+        <label>Введите только число</label>
+        <input type="text" matInput name="list" [(ngModel)]="addMathValue" />
+        <button type="button" (click)="addMath()" mat-button color="warn">
+          Добавить
+        </button>
+      </div>
+      <button
+        type="button"
+        mat-stroked-button
+        color="primary"
+        (click)="getMath('20')"
+      >
+        21
+      </button>
+      <button
+        type="button"
+        mat-stroked-button
+        color="primary"
+        (click)="getMath('20')"
+      >
+        50
+      </button>
+      <button
+        type="button"
+        mat-stroked-button
+        color="primary"
+        (click)="getMath('20')"
+      >
+        1999
+      </button>
+      <button
+        type="button"
+        mat-stroked-button
+        color="primary"
+        (click)="getMath('20')"
+      >
+        1
+      </button>
+      <button
+        type="button"
+        mat-stroked-button
+        color="primary"
+        (click)="getMath('20')"
+      >
+        10000000
+      </button>
+    </div>
+    <div class="trivia">
+      <h4 class="title-block">Trivia</h4>
+      <div class="form">
+        <label>Введите только число</label>
+        <input type="text" matInput name="list" [(ngModel)]="addTriviaValue" />
+        <button type="button" (click)="addTrivia()" mat-button color="warn">
+          Добавить
+        </button>
+      </div>
+      <button
+        type="button"
+        mat-stroked-button
+        color="primary"
+        (click)="getNumber('9')"
+      >
+        78
+      </button>
+      <button
+        type="button"
+        mat-stroked-button
+        color="primary"
+        (click)="getNumber('9')"
+      >
+        9
+      </button>
+      <button
+        type="button"
+        mat-stroked-button
+        color="primary"
+        (click)="getNumber('9')"
+      >
+        98
+      </button>
+      <button
+        type="button"
+        mat-stroked-button
+        color="primary"
+        (click)="getNumber('9')"
+      >
+        0
+      </button>
+      <button
+        type="button"
+        mat-stroked-button
+        color="primary"
+        (click)="getNumber('9')"
+      >
+        5
+      </button>
+    </div>
+    <div class="random-group">
+      <h4 class="title-block">Random</h4>
+      <div class="randomtrivia">
+        <button
+          type="button"
+          mat-stroked-button
+          color="primary"
+          (click)="getRandomTrivia()"
+        >
+          random trivia
+        </button>
+      </div>
+      <div class="randomyear">
+        <button
+          type="button"
+          mat-stroked-button
+          color="primary"
+          (click)="getRandomYear()"
+        >
+          random year
+        </button>
+      </div>
+      <div class="randomdate">
+        <button
+          type="button"
+          mat-stroked-button
+          color="primary"
+          (click)="getRandomDate()"
+        >
+          random date
+        </button>
+      </div>
+      <div class="randommath">
+        <button
+          type="button"
+          mat-stroked-button
+          color="primary"
+          (click)="getRandomMath()"
+        >
+          random math
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

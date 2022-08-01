@@ -1,6 +1,17 @@
 <div class="root">
-
-  {{triviaFact}}
-<app-todolist>
-</app-todolist>
+  <div class="container">
+    <ul mat-button-toggle-group class="navbar">
+      <li>
+        <a mat-button mat-button-toggle href="/todolist">todolist</a>
+      </li>
+      <li>
+        <a mat-button mat-button-toggle href="/numbersapi">numbersapi</a>
+      </li>
+    </ul>
+    <router-outlet> </router-outlet>
+    <!--     
+    <app-numbersapi> </app-numbersapi>
+    <app-todolist> </app-todolist>
+   -->
+  </div>
 </div>

@@ -1,0 +1,92 @@
+.group-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.group-buttons>div{
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.group-buttons button{
+    margin-bottom: 10px;
+    display: block;
+    border: 0;
+}
+.fact-text{
+    text-align: center;
+    border-bottom: 1px solid;
+    width: 100%;
+}
+.date button{
+    background-color:#3f51b5 ;
+    color: #fff;
+}
+.math button{
+    background-color:#ff4081 ;
+    color: #fff;
+}
+.trivia button{
+    background-color:#f44336 ;
+    color: #fff;
+}
+.random-group button{
+    background-color:#fff ;
+    color: #000;
+    box-shadow: 0 3px 1px -2px #0003, 0 2px 2px #00000024, 0 1px 5px #0000001f;
+}
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+.form input{
+    width: 70%;
+    height: 40px;
+    box-sizing: border-box;
+}
+.form button{
+    width: 25%;
+    height: 40px;
+    box-sizing: border-box;
+    margin-bottom: 0;
+}
+.form label{
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #0005;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    padding: 0 20px;
+}
+.modal-content{
+    padding: 20px;
+    background-color: #fff;
+    position: relative;
+    padding-top: 40px;
+}
+.close-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 15px;
+    background-color: #f44336;
+    color: #fff;
+    box-sizing: border-box;
+    border: 0;
+    cursor: pointer;
+}

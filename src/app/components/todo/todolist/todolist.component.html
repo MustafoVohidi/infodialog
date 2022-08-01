@@ -1,26 +1,31 @@
 <div class="list">
-  <h3>{{ title }}</h3>
+  <h3 class="title">{{ title }}</h3>
   <!-- form add todolist -->
   <div class="form">
-    <input type="text" name="list" [(ngModel)]="addListValue" />
-    <button type="button" (click)="addList()">Добавить</button>
+    <input type="text" matInput name="list" [(ngModel)]="addListValue" />
+    <button type="button" (click)="addList()"  mat-button color="warn">Добавить</button>
   </div>
   <!-- todo list -->
   <div class="list-items">
-    <div class="item" *ngFor="let item of listArr;  let i = index;">
-      <div class="item-name">{{item.name}}</div>
-      <button type="button" (click)="call(item)">редактировать</button>
-      <button type="button" (click)="deleteList(item,i)">удалить</button>
+    <div class="item" *ngFor="let item of listArr; let i = index">
+      <div class="item-name">{{ item.name }}</div>
+      <button type="button" (click)="call(item)"  mat-button color="warn">редактировать</button>
+      <button type="button" (click)="deleteList(item, i)"  mat-button class="button-warn">удалить</button>
     </div>
   </div>
   <!-- form edit item -->
-  <div class="modal">
+  <div class="modal" *ngIf="isOpenModal">
     <div class="modal-content">
-        <h3>редактировать</h3>
-        <div class="form-input">
-            <input type="text" name="list" [(ngModel)]="editListValue">
-            <button type="button" (click)="editList()">Обновить</button>
-        </div>
+        <button (click)="closeModal($event)" class="close-button">закрыть</button>
+      <h3>редактировать</h3>
+      <div class="form">
+          <input
+            matInput
+            name="list"
+            [(ngModel)]="editListValue"
+          />
+        <button type="button"  mat-button color="warn" (click)="editList()">Обновить</button>
+      </div>
     </div>
   </div>
 </div>

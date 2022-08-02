@@ -75,7 +75,7 @@ export class NumbersapiComponent implements OnInit {
         default:
           allDate = 31;
       }
-      let dateRand = Math.floor(Math.random() * 31);
+      let dateRand = Math.floor(Math.random() * allDate);
       this.getNumberShip(monthRand + dateRand + '/date');
     }, 60000);
   }
